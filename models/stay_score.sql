@@ -16,8 +16,8 @@ combined AS (
 ),
 scored AS (
     SELECT *,
-        ROUND(0.40*value_score + 0.40*connectivity_score
-            + 0.10*events_score + 0.10*liveability_score, 1) AS stay_score
+        ROUND(0.45*value_score + 0.45*connectivity_score
+            + 0.10*events_score, 1) AS stay_score
     FROM combined
 ),
 analyzed AS (
