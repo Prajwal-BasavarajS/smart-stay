@@ -1,23 +1,21 @@
 WITH connectivity AS (SELECT * FROM {{ ref('stg_connectivity') }}),
      value        AS (SELECT * FROM {{ ref('stg_value') }}),
      events       AS (SELECT * FROM {{ ref('stg_events') }}),
-     liveability  AS (SELECT * FROM {{ ref('stg_liveability') }}),
 
 combined AS (
     SELECT
-        v.neighbourhood, v.value_score, c.connectivity_score,
-        COALESCE(e.events_score, 0)       AS events_score,
-        COALESCE(l.liveability_score, 50) AS liveability_score
+        v.neighbourhood,
+        v.value_score,
+        c.connectivity_score,
+        COALESCE(e.events_score, 0) AS events_score
     FROM value v
     LEFT JOIN connectivity c USING (neighbourhood)
     LEFT JOIN events e       USING (neighbourhood)
-    LEFT JOIN liveability l  USING (neighbourhood)
     WHERE c.connectivity_score IS NOT NULL
 ),
 scored AS (
     SELECT *,
-        ROUND(0.40*value_score + 0.40*connectivity_score
-            + 0.10*events_score + 0.10*liveability_score, 1) AS stay_score
+        ROUND(0.50*value_score + 0.50*connectivity_score, 1) AS stay_score
     FROM combined
 ),
 analyzed AS (
