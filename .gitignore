@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.local/
+.cache/
+.codeoss/
+.gemini/
+.npm/
+.config/
+.rustup/
+.gsutil/
+*.so
+*.json
+.env
+service_account*
+smart-stay-project/
