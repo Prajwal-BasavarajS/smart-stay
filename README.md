@@ -6,6 +6,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/GCP-4285F4?style=flat&logo=googlecloud&logoColor=white">
+  <img src="https://medium.com/javarevisited/7-free-courses-to-learn-google-cloud-platform-for-beginners-cbb260fbd8e4">
   <img src="https://img.shields.io/badge/Apache_Spark-E25A1C?style=flat&logo=apachespark&logoColor=white">
   <img src="https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white">
   <img src="https://img.shields.io/badge/BigQuery-669DF6?style=flat&logo=googlebigquery&logoColor=white">
