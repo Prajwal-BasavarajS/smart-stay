@@ -75,7 +75,7 @@ Two deliberate modelling choices drive the ranking:
   departures-per-km² so that small, hyper-dense areas don't dominate scoring at
   the expense of larger, high-volume transit hubs.
 
-Final Stay Scores range from **~9.9 to 64.0** across the 99 neighbourhoods.
+Final Stay Scores range from **~9.9 to 94.0** across the 99 neighbourhoods.
 
 ---
 
